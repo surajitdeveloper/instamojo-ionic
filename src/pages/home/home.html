@@ -7,8 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label fixed>Pay Amount</ion-label>
+    <ion-input type="number" #amount></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Name</ion-label>
+    <ion-input type="text" #name></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Email</ion-label>
+    <ion-input type="email" #email></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Phone</ion-label>
+    <ion-input type="number" #phone></ion-input>
+  </ion-item>
+  <button ion-button (click)="openweb(amount.value, name.value, email.value, phone.value)" >Pay With Instamojo</button>
 </ion-content>
